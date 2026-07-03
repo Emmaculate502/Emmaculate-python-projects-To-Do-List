@@ -1,0 +1,22 @@
+
+tasks = ["study", "short walk" , "Cook dinner", "Watch movies"]
+
+while True:
+    print("\n1. View  2. Add  3. Remove  4. Exit")
+    choice = input("Choose: ")
+
+    if choice == "1":
+        print(tasks if tasks else "No tasks")
+
+    elif choice == "2":
+        tasks.append(input("New task: "))
+
+    elif choice == "3":
+        if tasks:
+            print(tasks)
+            tasks.pop(int(input("Number: ")) - 1)
+        else:
+            print("No task to remove")
+
+    elif choice == "4":
+        break
